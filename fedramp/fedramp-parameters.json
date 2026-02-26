@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "title": "FedRAMP High Baseline \u2014 Organization-Defined Parameters (ODPs) and Additional Requirements",
+    "description": "FedRAMP defines specific parameter values (ODPs) for many NIST 800-53 controls. This file captures the key FedRAMP-specified values that CSPs must implement. These are NOT optional \u2014 FedRAMP auditors (3PAOs) will test against these exact values.",
+    "version": "FedRAMP High Rev 5",
+    "last_updated": "2026-02-26",
+    "reference": "https://www.fedramp.gov/documents/"
+  },
+  "parameters": [
+    {
+      "control": "AC-2",
+      "parameter": "Account inactivity",
+      "fedramp_value": "90 days",
+      "notes": "Accounts inactive for 90 days must be automatically disabled."
+    },
+    {
+      "control": "AC-2(1)",
+      "parameter": "Automated account management",
+      "fedramp_value": "Required",
+      "notes": "Automated mechanisms to support account management."
+    },
+    {
+      "control": "AC-2(3)",
+      "parameter": "Account disable after inactivity",
+      "fedramp_value": "90 days",
+      "notes": "Automatically disable accounts after 90 days of inactivity."
+    },
+    {
+      "control": "AC-7",
+      "parameter": "Unsuccessful login attempts",
+      "fedramp_value": "3 attempts in 15 minutes",
+      "notes": "Lock account for 30 minutes or until unlocked by administrator."
+    },
+    {
+      "control": "AC-8",
+      "parameter": "System use notification",
+      "fedramp_value": "Required",
+      "notes": "Must display approved use notification before login."
+    },
+    {
+      "control": "AC-10",
+      "parameter": "Concurrent session control",
+      "fedramp_value": "3 sessions",
+      "notes": "Limit number of concurrent sessions per user."
+    },
+    {
+      "control": "AC-11",
+      "parameter": "Session lock",
+      "fedramp_value": "15 minutes",
+      "notes": "Initiate session lock after 15 minutes of inactivity."
+    },
+    {
+      "control": "AC-12",
+      "parameter": "Session termination",
+      "fedramp_value": "30 minutes",
+      "notes": "Terminate session after 30 minutes of inactivity."
+    },
+    {
+      "control": "AC-17",
+      "parameter": "Remote access",
+      "fedramp_value": "Must use encrypted VPN or equivalent",
+      "notes": "All remote access must be via encrypted channel with MFA."
+    },
+    {
+      "control": "AC-18",
+      "parameter": "Wireless access",
+      "fedramp_value": "WPA2-Enterprise minimum",
+      "notes": "All wireless must use enterprise-grade encryption."
+    },
+    {
+      "control": "AT-2",
+      "parameter": "Security awareness training",
+      "fedramp_value": "Annual + within 60 days of hire",
+      "notes": "All users within 60 days of initial access, annually thereafter."
+    },
+    {
+      "control": "AT-3",
+      "parameter": "Role-based security training",
+      "fedramp_value": "Annual + within 60 days of role assignment",
+      "notes": "Specialized training for security-relevant roles."
+    },
+    {
+      "control": "AU-2",
+      "parameter": "Audit events",
+      "fedramp_value": "FedRAMP defined event list",
+      "notes": "Must log: successful/failed logins, privilege use, object access, policy changes, admin actions, system events."
+    },
+    {
+      "control": "AU-3",
+      "parameter": "Audit record content",
+      "fedramp_value": "Date/time, event type, user ID, source, outcome, affected object",
+      "notes": "Minimum fields for every audit record."
+    },
+    {
+      "control": "AU-6",
+      "parameter": "Audit review frequency",
+      "fedramp_value": "Weekly review; real-time alerts for critical events",
+      "notes": "Weekly review of audit logs; immediate alerting on suspicious events."
+    },
+    {
+      "control": "AU-11",
+      "parameter": "Audit retention",
+      "fedramp_value": "1 year minimum; 90 days online",
+      "notes": "Logs retained 1 year, immediately available for 90 days."
+    },
+    {
+      "control": "CA-8",
+      "parameter": "Penetration testing",
+      "fedramp_value": "Annual by independent 3PAO",
+      "notes": "Must follow FedRAMP penetration test guidance."
+    },
+    {
+      "control": "CM-6",
+      "parameter": "Configuration settings",
+      "fedramp_value": "USGCB / CIS Benchmarks / STIGs",
+      "notes": "Must use government or industry hardening baselines."
+    },
+    {
+      "control": "CM-8",
+      "parameter": "Asset inventory",
+      "fedramp_value": "Updated at least monthly",
+      "notes": "Component inventory updated at least monthly; automated where possible."
+    },
+    {
+      "control": "CP-3",
+      "parameter": "Contingency training",
+      "fedramp_value": "Within 10 days of role + annually",
+      "notes": "Contingency plan training for designated personnel."
+    },
+    {
+      "control": "CP-4",
+      "parameter": "Contingency plan testing",
+      "fedramp_value": "Annual",
+      "notes": "Annual functional testing or tabletop exercise."
+    },
+    {
+      "control": "IA-2",
+      "parameter": "Multi-factor authentication",
+      "fedramp_value": "Required for all privileged and non-privileged access",
+      "notes": "MFA for all users; phishing-resistant for privileged."
+    },
+    {
+      "control": "IA-5(1)",
+      "parameter": "Password complexity",
+      "fedramp_value": "Case sensitive, min 12 chars, 1 upper, 1 lower, 1 digit, 1 special",
+      "notes": "Or use NIST 800-63B memorized secret guidance."
+    },
+    {
+      "control": "IR-6",
+      "parameter": "Incident reporting",
+      "fedramp_value": "US-CERT within 1 hour of determination",
+      "notes": "Report to US-CERT/CISA within 1 hour for categories per FedRAMP ICP."
+    },
+    {
+      "control": "PS-3",
+      "parameter": "Personnel screening",
+      "fedramp_value": "Commensurate with position sensitivity",
+      "notes": "National agency check minimum; higher for elevated positions."
+    },
+    {
+      "control": "RA-5",
+      "parameter": "Vulnerability scanning",
+      "fedramp_value": "Monthly OS/infra; monthly web app; annual pen test",
+      "notes": "Monthly authenticated scans; results reported in ConMon deliverables."
+    },
+    {
+      "control": "SC-7",
+      "parameter": "Boundary protection",
+      "fedramp_value": "Deny by default; allow by exception",
+      "notes": "All boundary traffic denied unless explicitly permitted."
+    },
+    {
+      "control": "SC-13",
+      "parameter": "Cryptographic protection",
+      "fedramp_value": "FIPS 140-2 (or 140-3) validated modules",
+      "notes": "Non-FIPS-validated modules prohibited for federal data."
+    },
+    {
+      "control": "SC-28",
+      "parameter": "Data at rest protection",
+      "fedramp_value": "FIPS-validated encryption (AES-256)",
+      "notes": "All federal data encrypted at rest using FIPS modules."
+    },
+    {
+      "control": "SI-2",
+      "parameter": "Flaw remediation",
+      "fedramp_value": "Critical: 30 days, High: 60 days, Moderate: 90 days",
+      "notes": "Patch timelines from identification/disclosure."
+    },
+    {
+      "control": "SI-4",
+      "parameter": "System monitoring",
+      "fedramp_value": "Continuous; 24/7 for High",
+      "notes": "Real-time monitoring with alerting capability."
+    }
+  ],
+  "fedramp_additional_requirements": [
+    {
+      "requirement": "Continuous Monitoring (ConMon)",
+      "description": "Monthly vulnerability scan results and POA&M updates submitted to FedRAMP PMO. Annual security assessment by 3PAO. Significant Change Requests (SCRs) submitted for boundary changes.",
+      "deliverables": [
+        "Monthly vulnerability scan reports",
+        "Monthly POA&M updates",
+        "Annual assessment report",
+        "Significant Change Requests",
+        "Incident reports per ICP"
+      ]
+    },
+    {
+      "requirement": "FedRAMP Authorization Boundary",
+      "description": "The CSP must clearly define and document the authorization boundary in the SSP, including all components, data flows, interconnections, and inherited controls. The boundary must be approved by the AO.",
+      "deliverables": [
+        "SSP Section 9",
+        "Network diagrams",
+        "Data flow diagrams"
+      ]
+    },
+    {
+      "requirement": "Integrated Inventory Workbook",
+      "description": "Maintain an integrated inventory workbook listing all hardware, software, and interconnections within the authorization boundary per FedRAMP template.",
+      "deliverables": [
+        "FedRAMP Integrated Inventory Workbook"
+      ]
+    },
+    {
+      "requirement": "Digital Identity Requirements",
+      "description": "Authentication aligns with NIST SP 800-63 Digital Identity Guidelines. AAL2 minimum for all users; AAL3 recommended for privileged access at High.",
+      "deliverables": [
+        "Digital Identity Determination documented in SSP"
+      ]
+    },
+    {
+      "requirement": "FIPS 199 Categorization",
+      "description": "System categorized per FIPS 199 and FIPS 200. For FedRAMP High, the system impact level is High for one or more of confidentiality, integrity, or availability.",
+      "deliverables": [
+        "FIPS 199 Categorization in SSP"
+      ]
+    }
+  ]
+}
